@@ -27,6 +27,6 @@ var existingPosts: [PostModel] = [
     PostModel(icon: .purple, title: "რამე სიმღერა მირჩიეთ", description: "დავალების კეთებისას ღამე ძაან მეძინება, ყავამ არ მიშველა"),
     PostModel(icon: .green, title: "ფიგმამ თქვენც დაგტანჯათ?", description: "შევწუხდი დაბალი ხარისხით იწერს ყველას"),
     PostModel(icon: .yellow, title: "მეტი ბედინა გვინდა", description: "შევწუხდით ნუ, აღარ გვინდა ამდენი ტეილორ Swift-ი"),
-    PostModel(icon: .yellow, title: "მეტი ბედინა გვინდა", description: "შევწუხდით ნუ, აღარ გვინდა ამდენი ტეილორ Swift-ი")
+    PostModel(icon: .yellow, title: "როდის ვქეიფობთ?", description: "როცა საშუალება ცოტაა დავალებები გვექნება -.- ანუ არასდროს დდდდ ")
 
 ]

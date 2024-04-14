@@ -58,13 +58,13 @@ class NewPostViewController: UIViewController {
         return descriptionLabel
     }()
     
-    let firstSpacer: UIView = {
-        let firstSpacer = UIView()
+    let firstSpacer: UIButton = {
+        let firstSpacer = UIButton()
         firstSpacer.translatesAutoresizingMaskIntoConstraints = false
         return firstSpacer
     }()
     
-    let secondSpacer: UIView = {
+    let secondSpacer: UIButton = {
         let secondSpacer = UIButton()
         secondSpacer.translatesAutoresizingMaskIntoConstraints = false
         return secondSpacer
@@ -101,7 +101,8 @@ class NewPostViewController: UIViewController {
     let postStackView: UIStackView = {
         let postStackView = UIStackView()
         postStackView.axis = .vertical
-        postStackView.spacing = 30
+        postStackView.spacing = 20
+        postStackView.distribution = .fillProportionally
         postStackView.translatesAutoresizingMaskIntoConstraints = false
         return postStackView
     }()
@@ -125,7 +126,7 @@ class NewPostViewController: UIViewController {
     let iconsMainStackView: UIStackView = {
         let iconsMainStackView = UIStackView()
         iconsMainStackView.axis = .vertical
-        iconsMainStackView.spacing = 10
+        iconsMainStackView.spacing = 25
         iconsMainStackView.translatesAutoresizingMaskIntoConstraints = false
         return iconsMainStackView
     }()
@@ -189,7 +190,7 @@ class NewPostViewController: UIViewController {
             postStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 33),
             postStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -33),
             postStackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 90),
-            postStackView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.35)
+            postStackView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.4)
         ])
     }
     
@@ -197,6 +198,10 @@ class NewPostViewController: UIViewController {
         postStackView.addArrangedSubview(titleInputsStackView)
         postStackView.addArrangedSubview(descriptionInputsStackView)
         postStackView.addArrangedSubview(iconsMainStackView)
+
+        titleInputsStackView.setContentHuggingPriority(.defaultHigh, for: .vertical)
+        descriptionInputsStackView.setContentHuggingPriority(.defaultHigh, for: .vertical)
+
     }
     //firstTwoInputsStackView ჩამატებულ სტეკვიუში ვამატებ სათაურის ლეიბლს და ინფუთ ფილდს
     func addTitleInputsToSV(){
@@ -211,12 +216,12 @@ class NewPostViewController: UIViewController {
         descriptionInputsStackView.addArrangedSubview(descriptionInputField)
         descriptionInputField.heightAnchor.constraint(equalToConstant: 45).isActive = true
 
-
     }
     
     func addIconsSVToIconMainSV(){
         iconsMainStackView.addArrangedSubview(iconLabel)
         iconsMainStackView.addArrangedSubview(iconsStackView)
+        iconsStackView.heightAnchor.constraint(equalToConstant: 40).isActive = true
     }
     
     func addRedIconToIconsSV(){
@@ -224,11 +229,13 @@ class NewPostViewController: UIViewController {
         iconsStackView.addArrangedSubview(redIcon)
         
         NSLayoutConstraint.activate([
-            firstSpacer.widthAnchor.constraint(equalToConstant: 10),
-            firstSpacer.heightAnchor.constraint(equalToConstant: 20),
+            firstSpacer.widthAnchor.constraint(equalToConstant: 20),
+            firstSpacer.heightAnchor.constraint(equalToConstant: 30),
             redIcon.widthAnchor.constraint(equalToConstant: 40),
             redIcon.heightAnchor.constraint(equalToConstant: 40)
         ])
+        redIcon.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        
         redIcon.addTarget(self, action: #selector(buttonClicked(_:)), for: .touchUpInside) //ეს კონკრეტულები objc გარეშე არ გამოდიოდა, სხვაგან არსად მაქ გამოყენებული
     }
     
@@ -239,6 +246,7 @@ class NewPostViewController: UIViewController {
             purpleIcon.widthAnchor.constraint(equalToConstant: 40),
             purpleIcon.heightAnchor.constraint(equalToConstant: 40)
         ])
+        purpleIcon.setContentHuggingPriority(.defaultHigh, for: .horizontal)
         purpleIcon.addTarget(self, action: #selector(buttonClicked(_:)), for: .touchUpInside)
     }
     
@@ -249,6 +257,7 @@ class NewPostViewController: UIViewController {
             greenIcon.widthAnchor.constraint(equalToConstant: 40),
             greenIcon.heightAnchor.constraint(equalToConstant: 40)
         ])
+        greenIcon.setContentHuggingPriority(.defaultHigh, for: .horizontal)
         greenIcon.addTarget(self, action: #selector(buttonClicked(_:)), for: .touchUpInside)
     }
     
@@ -257,11 +266,12 @@ class NewPostViewController: UIViewController {
         iconsStackView.addArrangedSubview(secondSpacer)
         
         NSLayoutConstraint.activate([
-            secondSpacer.widthAnchor.constraint(equalToConstant: 10),
-            secondSpacer.heightAnchor.constraint(equalToConstant: 20),
+            secondSpacer.widthAnchor.constraint(equalToConstant: 20),
+            secondSpacer.heightAnchor.constraint(equalToConstant: 30),
             yellowIcon.widthAnchor.constraint(equalToConstant: 40),
             yellowIcon.heightAnchor.constraint(equalToConstant: 40)
         ])
+        greenIcon.setContentHuggingPriority(.defaultHigh, for: .horizontal)
         yellowIcon.addTarget(self, action: #selector(buttonClicked(_:)), for: .touchUpInside)
     }
     
@@ -281,11 +291,13 @@ class NewPostViewController: UIViewController {
     
     func clickedAddButton(){
         let icon: Icon
-        if let title = titleInputField.text,
+        if let selectedIcon = selectedIcon?.tag,
+           let title = titleInputField.text,
+           title.isEmpty == false,
            let description = descriptionInputField.text,
-           let selectedIcon = selectedIcon?.tag{
+           description.isEmpty == false {
             
-            switch selectedIcon{
+            switch selectedIcon {
             case 1:
                 icon = .red
             case 2:
@@ -304,6 +316,10 @@ class NewPostViewController: UIViewController {
                 self.navigationController?.popViewController(animated: true)
             }))
             self.present(alert, animated: true, completion: nil)
+        } else {
+            let alertOfProblem = UIAlertController(title: "პოსტი ვერ დაემატა", message: "გადაამოწმე შეყვანილი მნიშვნელობები და სცადე ხელახლა", preferredStyle: UIAlertController.Style.alert)
+            alertOfProblem.addAction(UIAlertAction(title: "კარგი", style: UIAlertAction.Style.default, handler: .none))
+            self.present(alertOfProblem, animated: true, completion: nil)
         }
         
     }

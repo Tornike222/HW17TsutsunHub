@@ -30,7 +30,7 @@ class PostsViewController: UIViewController {
     
     let newPostButton: CustomButton = {
         let startButton = CustomButton()
-        startButton.setTitle("ახალი წუწუნ ბარათის დამატება", for: .normal)
+        startButton.setTitle("წუწუნ ბარათის დამატება", for: .normal)
         return startButton
     }()
     

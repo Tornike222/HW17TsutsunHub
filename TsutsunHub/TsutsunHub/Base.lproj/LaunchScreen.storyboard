@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FiraGO-Bold.ttf">
+            <string>FiraGO-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="BlueBackground" translatesAutoresizingMaskIntoConstraints="NO" id="3rw-RC-2tr">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="წუწუნHub" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ3-wb-cgh">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <fontDescription key="fontDescription" name="FiraGO-Bold" family="FiraGO" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3rw-RC-2tr" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="B0B-Cx-mUD"/>
+                            <constraint firstAttribute="bottom" secondItem="ZJ3-wb-cgh" secondAttribute="bottom" id="BIu-jh-h3I"/>
+                            <constraint firstItem="ZJ3-wb-cgh" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="F4b-QG-jwh"/>
+                            <constraint firstAttribute="trailing" secondItem="ZJ3-wb-cgh" secondAttribute="trailing" id="Iqd-NJ-Kh5"/>
+                            <constraint firstAttribute="bottom" secondItem="3rw-RC-2tr" secondAttribute="bottom" id="cot-vX-dA4"/>
+                            <constraint firstAttribute="trailing" secondItem="3rw-RC-2tr" secondAttribute="trailing" id="fdD-wY-uyr"/>
+                            <constraint firstItem="ZJ3-wb-cgh" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="sjE-Ei-Krx"/>
+                            <constraint firstItem="3rw-RC-2tr" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="tvY-wD-OQm"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.671755725190835" y="374.64788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BlueBackground" width="118.5" height="256"/>
+    </resources>
+</document>

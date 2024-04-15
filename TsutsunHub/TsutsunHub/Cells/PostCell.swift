@@ -89,7 +89,6 @@ class PostCell: UICollectionViewCell {
             postStackView.topAnchor.constraint(equalTo: postIcon.bottomAnchor, constant: 12)
         ])
 
-        
     }
     
 }

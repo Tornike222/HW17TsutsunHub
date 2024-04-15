@@ -83,7 +83,8 @@ class OnboardingViewController: UIViewController {
     func redirectToPostsVC(){
         let postsVC = PostsViewController()
         navigationController?.pushViewController(postsVC, animated: true)
-        tabBarController?.navigationItem.setHidesBackButton(true, animated: true)
+        navigationController?.setViewControllers([postsVC], animated: true)
+//        tabBarController?.navigationItem.setHidesBackButton(true, animated: true)
     }
 
 }

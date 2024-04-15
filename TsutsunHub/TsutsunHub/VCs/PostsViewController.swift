@@ -75,7 +75,7 @@ class PostsViewController: UIViewController {
         
         view.addSubview(postsCollectionView)
         NSLayoutConstraint.activate([
-            postsCollectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 33),
+            postsCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             postsCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
             postsCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
             postsCollectionView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.6)

@@ -50,12 +50,12 @@ class NewPostViewController: UIViewController {
     }()
     
     let iconLabel: UILabel = {
-        let descriptionLabel = UILabel()
-        descriptionLabel.text = "აირჩიეთ აიქონი"
-        descriptionLabel.textColor = .white
-        descriptionLabel.font = UIFont(name: "FiraGO-Regular", size: 20)
-        descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
-        return descriptionLabel
+        let iconLabel = UILabel()
+        iconLabel.text = "აირჩიეთ აიქონი"
+        iconLabel.textColor = .white
+        iconLabel.font = UIFont(name: "FiraGO-Regular", size: 20)
+        iconLabel.translatesAutoresizingMaskIntoConstraints = false
+        return iconLabel
     }()
     
     let firstSpacer: UIButton = {
@@ -126,7 +126,7 @@ class NewPostViewController: UIViewController {
     let iconsMainStackView: UIStackView = {
         let iconsMainStackView = UIStackView()
         iconsMainStackView.axis = .vertical
-        iconsMainStackView.spacing = 25
+        iconsMainStackView.spacing = 15
         iconsMainStackView.translatesAutoresizingMaskIntoConstraints = false
         return iconsMainStackView
     }()
@@ -136,6 +136,7 @@ class NewPostViewController: UIViewController {
         iconsStackView.axis = .horizontal
         iconsStackView.spacing = 20
         iconsStackView.distribution = .equalCentering
+        iconsStackView.alignment = .center
         iconsStackView.translatesAutoresizingMaskIntoConstraints = false
         return iconsStackView
     }()
@@ -221,7 +222,7 @@ class NewPostViewController: UIViewController {
     func addIconsSVToIconMainSV(){
         iconsMainStackView.addArrangedSubview(iconLabel)
         iconsMainStackView.addArrangedSubview(iconsStackView)
-        iconsStackView.heightAnchor.constraint(equalToConstant: 40).isActive = true
+//        iconsStackView.heightAnchor.constraint(equalToConstant: 40).isActive = true
     }
     
     func addRedIconToIconsSV(){

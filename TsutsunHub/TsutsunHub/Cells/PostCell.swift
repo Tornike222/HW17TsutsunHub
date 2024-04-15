@@ -7,11 +7,24 @@
 
 import UIKit
 
+protocol PostsCellDelegate {
+    func deletePost(from cell: PostCell)
+}
+
 class PostCell: UICollectionViewCell {
+    var delegate: PostsCellDelegate?
+    
     let postIcon: UIImageView = {
         let postIcon = UIImageView()
         postIcon.translatesAutoresizingMaskIntoConstraints = false
         return postIcon
+    }()
+    
+    let deleteButton: UIButton = {
+        let deleteButton = UIButton()
+        deleteButton.setImage(UIImage(named: "Delete") ?? UIImage(), for: .normal)
+        deleteButton.translatesAutoresizingMaskIntoConstraints = false
+        return deleteButton
     }()
     
     let postStackView: UIStackView = {
@@ -57,10 +70,50 @@ class PostCell: UICollectionViewCell {
     
     func setupUI(){
         addPostIcon()
+        addDeleteButton()
         addPostStackView()
         addTitleText()
         addBodyLabel()
     }
+    
+    func addPostIcon(){
+        addSubview(postIcon)
+        NSLayoutConstraint.activate([
+            postIcon.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            postIcon.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+            postIcon.widthAnchor.constraint(equalToConstant: 40),
+            postIcon.heightAnchor.constraint(equalToConstant: 40)
+        ])
+        
+    }
+    
+    func addDeleteButton(){
+        addSubview(deleteButton)
+        NSLayoutConstraint.activate([
+            deleteButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            deleteButton.topAnchor.constraint(equalTo: topAnchor, constant: 25),
+            deleteButton.widthAnchor.constraint(equalToConstant: 20),
+            deleteButton.heightAnchor.constraint(equalToConstant: 20)
+        ])
+        
+        deleteButton.addAction(UIAction(handler: { _ in
+            self.deleteButtonTapped()
+            self.deleteButton.setImage(UIImage(named: "Delete") ?? UIImage(), for: .normal)
+        }), for: .touchUpInside)
+        deleteButton.addAction(UIAction(handler: { _ in
+            self.deleteButton.setImage(UIImage(named: "DeleteClicked") ?? UIImage(), for: .normal)
+        }), for: .touchDown)
+    }
+    
+    func addPostStackView(){
+        addSubview(postStackView)
+        NSLayoutConstraint.activate([
+            postStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            postStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            postStackView.topAnchor.constraint(equalTo: postIcon.bottomAnchor, constant: 12)
+        ])
+    }
+    
     func addTitleText(){
         postStackView.addArrangedSubview(titleLabel)
         titleLabel.setContentHuggingPriority(.defaultLow, for: .vertical)
@@ -71,25 +124,10 @@ class PostCell: UICollectionViewCell {
         bodyLabel.setContentHuggingPriority(.defaultHigh, for: .vertical)
     }
     
-    func addPostIcon(){
-        addSubview(postIcon)
-        NSLayoutConstraint.activate([
-            postIcon.leftAnchor.constraint(equalTo: leftAnchor, constant: 20),
-            postIcon.topAnchor.constraint(equalTo: topAnchor, constant: 20),
-            postIcon.widthAnchor.constraint(equalToConstant: 40),
-            postIcon.heightAnchor.constraint(equalToConstant: 40)
-        ])
-        
+    func deleteButtonTapped(){
+        delegate?.deletePost(from: self)
     }
-    func addPostStackView(){
-        addSubview(postStackView)
-        NSLayoutConstraint.activate([
-            postStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            postStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            postStackView.topAnchor.constraint(equalTo: postIcon.bottomAnchor, constant: 12)
-        ])
-
-    }
+    
     
 }
 

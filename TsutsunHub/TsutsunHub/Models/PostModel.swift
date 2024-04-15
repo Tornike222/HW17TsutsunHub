@@ -25,8 +25,8 @@ struct PostModel {
 var existingPosts: [PostModel] = [
     PostModel(icon: .red, title: "ბექა რას გვერჩი?", description: "ახლა გავხსენი დავალება, ეს რააარიიი"),
     PostModel(icon: .purple, title: "რამე სიმღერა მირჩიეთ", description: "დავალების კეთებისას ღამე ძაან მეძინება, ყავამ არ მიშველა"),
-    PostModel(icon: .green, title: "ფიგმამ თქვენც დაგტანჯათ?", description: "შევწუხდი დაბალი ხარისხით იწერს ყველას"),
-    PostModel(icon: .yellow, title: "მეტი ბედინა გვინდა", description: "შევწუხდით ნუ, აღარ გვინდა ამდენი ტეილორ Swift-ი"),
-    PostModel(icon: .yellow, title: "როდის ვქეიფობთ?", description: "როცა საშუალება ცოტაა დავალებები გვექნება -.- ანუ არასდროს დდდდ ")
+    PostModel(icon: .yellow, title: "მეტი ბედინა გვინდა", description: "ჩემი მეზობელია და ისედაც ყოველდღე ვხედავ :დდ"),
+    PostModel(icon: .red , title: "კაი და ისევ დიალოგები თორნიკე?", description: "სხვარაგზაა? კომუნიკაციის ყველაზე მარტივი საშუალებაა"),
+    PostModel(icon: .purple, title: "ისადა როდის ვქეიფობთ?", description: "აი ახლა ოთხშაბათს, სამშბათს რეტრო უწევს და ბედნიერები ვიქნებით :დ")
 
 ]

@@ -71,7 +71,6 @@ class PostsViewController: UIViewController {
     
     func setupPostsCollectionView(){
         postsCollectionView.dataSource = self
-        postsCollectionView.delegate = self
         
         view.addSubview(postsCollectionView)
         NSLayoutConstraint.activate([
@@ -112,6 +111,7 @@ extension PostsViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let postCell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCell", for: indexPath) as? PostCell
+        postCell?.delegate = self
         let currentPost = existingPosts[indexPath.row]
         postCell?.titleLabel.text = currentPost.title
         postCell?.bodyLabel.text = currentPost.description
@@ -120,10 +120,15 @@ extension PostsViewController: UICollectionViewDataSource{
     }
 }
 
-extension PostsViewController: UICollectionViewDelegate {
+extension PostsViewController: PostsCellDelegate {
+    func deletePost(from cell: PostCell) {
+        if let indexPath = postsCollectionView.indexPath(for: cell){
+            existingPosts.remove(at: indexPath.row)
+            postsCollectionView.reloadData()
+        }
+    }
     
 }
-
 
 
 

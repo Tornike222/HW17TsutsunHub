@@ -3,4 +3,226 @@
    uuid = "2CC70F5D-2E54-43C8-A4A0-308309C95CD0"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4A50C6AC-C692-47B5-9DF7-12597A0F7B05"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TsutsunHub/VCs/PostsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "deletePost(from:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BCE5AB9E-3E16-47A6-A9CF-5489F03A22D6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TsutsunHub/VCs/PostsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "deletePost(from:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7483B9E1-F30C-43E1-A35D-6C7F42769959"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TsutsunHub/VCs/PostsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "PostsViewController"
+            landmarkType = "21">
+            <Locations>
+               <Location
+                  uuid = "7483B9E1-F30C-43E1-A35D-6C7F42769959 - e3062d2d1b41fec4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TsutsunHub.PostsViewController.deletePost(from: TsutsunHub.PostCell) -&gt; ()"
+                  moduleName = "TsutsunHub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/telkanishvili/Desktop/TBC%20x%20USAID/HW17%20UICollectionView%20TsutsunHub/TsutsunHub/TsutsunHub/VCs/PostsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "125"
+                  endingLineNumber = "125"
+                  offsetFromSymbolStart = "208">
+               </Location>
+               <Location
+                  uuid = "7483B9E1-F30C-43E1-A35D-6C7F42769959 - e3062d2d1b41fec4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TsutsunHub.PostsViewController.deletePost(from: TsutsunHub.PostCell) -&gt; ()"
+                  moduleName = "TsutsunHub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/telkanishvili/Desktop/TBC%20x%20USAID/HW17%20UICollectionView%20TsutsunHub/TsutsunHub/TsutsunHub/VCs/PostsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "125"
+                  endingLineNumber = "125"
+                  offsetFromSymbolStart = "192">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5AA23BF5-4F00-401C-9453-5D865A70B5DA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TsutsunHub/Cells/PostCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "deleteButtonTapped()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AF00B18B-29AB-4933-B6A1-4A2D0132AB3D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TsutsunHub/Cells/PostCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "PostCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "AF00B18B-29AB-4933-B6A1-4A2D0132AB3D - 88351adc039b2616"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TsutsunHub.PostCell.delegate.getter : Swift.Optional&lt;TsutsunHub.PostsCellDelegate&gt;"
+                  moduleName = "TsutsunHub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/telkanishvili/Desktop/TBC%20x%20USAID/HW17%20UICollectionView%20TsutsunHub/TsutsunHub/TsutsunHub/Cells/PostCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "AF00B18B-29AB-4933-B6A1-4A2D0132AB3D - f23ea93e323d560a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TsutsunHub.PostCell.delegate.setter : Swift.Optional&lt;TsutsunHub.PostsCellDelegate&gt;"
+                  moduleName = "TsutsunHub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/telkanishvili/Desktop/TBC%20x%20USAID/HW17%20UICollectionView%20TsutsunHub/TsutsunHub/TsutsunHub/Cells/PostCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "AF00B18B-29AB-4933-B6A1-4A2D0132AB3D - 8ab5069182d75076"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TsutsunHub.PostCell.delegate.modify : Swift.Optional&lt;TsutsunHub.PostsCellDelegate&gt;"
+                  moduleName = "TsutsunHub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/telkanishvili/Desktop/TBC%20x%20USAID/HW17%20UICollectionView%20TsutsunHub/TsutsunHub/TsutsunHub/Cells/PostCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "AF00B18B-29AB-4933-B6A1-4A2D0132AB3D - 78530ee19bb59cd6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TsutsunHub.PostCell.delegate.modify : Swift.Optional&lt;TsutsunHub.PostsCellDelegate&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "TsutsunHub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/telkanishvili/Desktop/TBC%20x%20USAID/HW17%20UICollectionView%20TsutsunHub/TsutsunHub/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "AF00B18B-29AB-4933-B6A1-4A2D0132AB3D - 336e347d298b58a6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TsutsunHub.PostCell.init(frame: __C.CGRect) -&gt; TsutsunHub.PostCell"
+                  moduleName = "TsutsunHub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/telkanishvili/Desktop/TBC%20x%20USAID/HW17%20UICollectionView%20TsutsunHub/TsutsunHub/TsutsunHub/Cells/PostCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  uuid = "AF00B18B-29AB-4933-B6A1-4A2D0132AB3D - fd94a48e01ca8152"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TsutsunHub.PostCell.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;TsutsunHub.PostCell&gt;"
+                  moduleName = "TsutsunHub"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/telkanishvili/Desktop/TBC%20x%20USAID/HW17%20UICollectionView%20TsutsunHub/TsutsunHub/TsutsunHub/Cells/PostCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "124">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A8E0FE09-32E3-4BD6-A325-460F3E029A80"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TsutsunHub/Cells/PostCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "PostsCellDelegate"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
